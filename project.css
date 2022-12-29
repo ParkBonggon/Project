@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01;
+    color: #2B292D;
+}
+
+/* section */
+
+
+/* Reset CSS  */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button input textarea {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+}
+
+button:focus button:active input:focus input:active textarea:focus textarea:active {
+    outline: none;
+    box-shadow: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* ≥ 768px (Desktop) */
+@media screen and (min-width: 768px) {
+
+    /* Reset CSS */
+    p {
+        font-size: 22px;
+        line-height: 1.36363;
+
+    }
+}
+
+/* Custom Grid System - Fix container width */
+@media screen and (min-witdh: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background-color: #f5ebdc;
+}
+
+.head-theme {
+    width: 100%;
+    margin: 0;
+}
+
+.welcome {
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 1.5;
+
+    letter-spacing: -0.05;
+    color: white;
+    text-shadow: 2px 3px 0 rgba(3, 1, 1, 0.8);
+
+}
+
+/* 메인 배너 */
+.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-image: url(./asset/Fukuoka\ 2.jpg);
+    background-size: cover;
+    background-position: 40% 60%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 24px 0px;
+}
+
+.header {
+    width: 290px;
+    height: 120px;
+    text-align: center;
+    color: #825A32;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.guide-info {
+    position: relative;
+    width: 290px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 22px;
+}
+
+.guide-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.public-transport {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: -0.05em;
+    color: black;
+    border-radius: 47px;
+    background: #dfd5c3;
+    box-shadow: 2px 2px 0px #cfc6b5,
+        -2px -2px 0px #efe4d1;
+}
+
+.bus {
+    margin-right: 8px;
+}
+
+/* Manner part */
+
+.manner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f6f0;
+    padding-bottom: 5%;
+}
+
+.manner-to {
+    text-align: center;
+}
+
+/* 머릿말 제목 */
+.main-header {
+    color: #825A32;
+    background-color: transparent;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+/* image */
+.manner-image {
+    width: 290px;
+    height: auto;
+    margin: auto 10%;
+}
+
+.main-theme {
+    text-align: center;
+    padding-top: 5%;
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+.manner-explain {
+    display: inline-block;
+    width: 290px;
+}
+
+.manner-text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 22px;
+
+}
+
+/* 영상 클릭시 도움말 */
+.image-explain {
+    display: inline-block;
+    width: 290px;
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+
+/* caution */
+
+.manner-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caution {
+    display: inline-block;
+    color: #005a3c;
+    text-align: left;
+    width: 290px;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.manner-text2 {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 24px;
+    line-height: 22px;
+}
+
+/* trip */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.couse {
+    background-color: #dfd5c3;
+}
+
+.tour-header{
+    font-size: 22px;
+    line-height: 400;
+    font-weight: 700;
+    text-align: center;
+}
+
+.trip.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-image: url(./asset/fukuoka-canal-city-191023.jpg);
+    background-size: cover;
+    background-position: 40% 60%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 24px 0px;
+}
+
+
+.trip p {
+    color: #825A32;
+    margin-bottom: 24px;
+}
+
+.tour-explain {
+    font-size: 12px;
+    width: 320px;
+    text-align: center;
+    margin-bottom: 24px;
+    background-color: whitesmoke;
+    padding: 20px 15px;
+    border-top: 5px solid #825A32;
+}
+
+.welcome.trip {
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.05;
+    color: white;
+    text-shadow: 2px 3px 0 rgba(3, 1, 1, 0.8);
+}
+
+.tour {
+    margin-top: 24px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    border-bottom-right-radius: 6px ;
+    border-bottom-left-radius: 6px;
+    border-top: 4px solid #825A32;
+}
+
+.tour-image {
+    border-bottom: 2px solid #825A32;
+}
+    
+.tour-name {
+    margin: 8px;
+    color: #005a3c;
+    font-weight: 700;
+}
+
+/* 물어보기 */
+.tourist {
+    width: 320px;
+    height: 40px;
+    margin: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap; 
+    -webkit-line-clamp:2; 
+    -webkit-box-orient:vertical; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+
+}
+
+/* Festival */
+
+.Festival {
+    background-color:  #f5ebdc ;
+}
+
+.Festival-header{
+    font-size: 22px;
+    line-height: 400;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Festival.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-image: url(./asset/hojoya2.jpg);
+    background-size: cover;
+    background-position: 40% 60%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 24px 0px;
+}
+
+
+.Festival-explain {
+    font-size: 12px;
+    width: 320px;
+    text-align: center;
+    margin-bottom: 24px;
+    background-color: whitesmoke;
+    padding: 20px 15px;
+    border-top: 5px solid #825A32;
+}
+
+.welcome .Festival{
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.05;
+    color: white;
+    text-shadow: 2px 3px 0 rgba(3, 1, 1, 0.8);
+}
+.Festival-title{
+    width: 430px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: #005a3c;
+    padding: 8px;
+    text-align: center;
+}
+
+.Omaturi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+.Omaturi-picture{
+    width: 390px;
+    height: 10px;
+    object-fit: cover;
+}
+
