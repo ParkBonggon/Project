@@ -1,0 +1,25 @@
+{
+    "clothes": [
+        {
+            "type": "t-shirt",
+            "gender": "male",
+            "Size": "large",
+            "color": "blue",
+            "image": "../shopping-template/img/blue_t.png"
+        },
+        {
+            "type": "t-shirt",
+            "gender": "male",
+            "Size": "large",
+            "color": "blue",
+            "image": "../shopping-template/img/blue_t.png"
+        },
+        {
+            "type": "t-shirt",
+            "gender": "male",
+            "Size": "large",
+            "color": "blue",
+            "image": "../shopping-template/img/blue_t.png"
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+:root { 
+    /* 동일한 요소 반복 사용이 예상되는 경우 변수 선언을 시켜준다. */
+    /* color */
+    --color-black: #3f454d;
+    --color-white: #ffffff;
+    --color-blue: #3b88c3;
+    --color-yellow: #fbbe28;
+    --color-pink: #fd7f84;
+    --color-light-grey: #dfdfdf;
+    /* size */
+    --size-button: 60px;
+    --font-size: 18px;
+    --base-line : 8px;
+    --radius-size : 4px;
+    --size-thumbnail : 50px;
+    /* animation */
+    --animation-duration: 250ms;   
+}
+li {
+    list-style: none;
+    transition: transform 250ms ease;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo{
+    cursor: pointer;
+    transition: transform var(--animation-duration) ease ;
+}
+
+.Bts{
+    display: flex;
+    align-items: center;
+}
+
+.Bt{
+    transition: transform var(--animation-duration) ease;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: var(--base-line);
+}
+
+.Bt:hover,
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.imgBt {
+    width: var(--size-button);
+    height: var(--size-button);
+}
+
+.colorBt {
+    font-size: var(--font-size);
+    padding: calc(var(--base-line)*2);
+    border-radius: var(--radius-size);
+}
+
+.Blue {
+    background-color: var(--color-blue);
+}
+
+.Yellow {
+    background-color: var(--color-yellow);
+}
+
+.Pink {
+    background-color: var(--color-pink);
+}
+
+main{
+    width: 60%;
+    height: 60%;
+    overflow-y: scroll;    
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}
+
+.clothes{
+    padding-left: 0 px;
+    
+}
+
+.clothes-line{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: var(--base-line);
+    margin-bottom: var(--base-line);
+}
+
+.clothes-thumbnail{
+    width: var(--size-thumbnail);
+    height: var(--size-thumbnail);
+}
+
+.gender-size{
+    margin-left: var(--base-line);
+    font-size: var(--font-size);
+}
+
