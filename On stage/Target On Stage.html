@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Stage</title>
+    <style>
+        body{
+            background-color: gray;
+            margin: 0px;
+        }
+        .Point{
+            position: absolute;
+            color: yellowgreen;
+            font-size: large;
+            margin: 50px;
+        }
+        .image{
+            position: absolute;
+            overflow: hidden;
+        }
+        .Line{
+            position: absolute;
+            background-color: yellowgreen;
+        }
+        .X{
+            width: 1px;
+            height: 100%;
+        }
+        .Y{
+            height: 1px;
+            width: 100%;
+        }
+        .stage{
+            position: relative;
+            top: 40vh;
+            left: 80px;
+        }
+        .stage:hover{
+            animation-name: fire;
+            animation-duration: 5ms;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+        @keyframes fire {
+            20%{
+                opacity: 0.4;
+            }
+            60%{
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Point"></div>
+    <div>
+        <img src="./img/run.png" alt="Point" class="image">
+    </div>
+    <div class="Line X"></div>
+    <div class="Line Y"></div>
+    <img src="./img/stage.jpg" alt="stage" class="stage">
+    <script>
+        const Point = document.querySelector('.Point');
+        const x = document.querySelector('.X');
+        const y = document.querySelector('.Y');
+        const image = document.querySelector('.image');
+        const stage = document.querySelector('.stage');
+
+        document.body.style.cursor = 'none';
+
+        addEventListener('load', () => {
+            const imageRect = image.getBoundingClientRect();
+            const imageHalfWidth = imageRect.width /2;
+            const imageHalfHeight = imageRect.height /2;
+        document.addEventListener('mousemove', (e) =>{
+            const PointX = e.clientX;
+            const PointY = e.clientY;
+            x.style.transform = `translateX(${PointX}px)`;
+            y.style.transform = `translateY(${PointY}px)`;
+            Point.innerHTML = `Point: ${PointX}, ${PointY}`;
+            Point.style.transform = `translate(${PointX}px , ${PointY}px)`;
+            image.style.transform = `translate(${PointX-imageHalfWidth}px , ${PointY-imageHalfHeight}px)`;
+        });
+        });
+            /* performance issue
+            Point.innerHTML = `Point: ${PointX}, ${PointY}`;
+            Point.style.top = PointY + 'px';
+            Point.style.left = PointX + 'px';
+            y.style.top = PointY + 'px';
+            x.style.left = PointX + 'px';
+            image.style.top = PointY + 'px';
+            image.style.left = PointX + 'px';
+            */
+        stage.addEventListener('mouseenter', (e)=>{
+            image.src="./img/dance2.gif"
+        });
+        stage.addEventListener('mouseout', (e)=>{
+            image.src="./img/run.png"
+        });
+    </script> 
+</body>
+</html>
