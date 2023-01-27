@@ -1,0 +1,126 @@
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body{
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    background: url(./img/bgimage.png) center/cover;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.game-stopper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+}
+
+.game-field{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.game-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    height: 150px;
+    padding: 20px;
+}
+
+.game-pause{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: transform 200ms ease-in;
+    margin: 15px;
+}
+
+.game-pause:hover{
+    transform: scale(1.1);
+}
+
+.game-time{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.883);
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+}
+
+.game-score{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(98, 60, 224);
+    text-align: center;
+    font-size: 24px;
+    padding: 4px;
+    border: 2px solid darkslateblue;
+    border-radius: 5px;
+    visibility: hidden;
+    user-select: none;
+    cursor: auto;
+}
+
+.game-menu{
+    width: 500px;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(201, 195, 236, 0.862);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    transform: translateY(-300%);
+}
+
+.game-menu-hide{
+    display: none;
+}
+
+.game-retry{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: transform 200ms ease-in;
+    margin: 15px;
+}
+
+.game-retry:hover{
+    transform: scale(1.1);
+}
+
+.game-result{
+    display: block;
+    font-size: 30px;
+}
+
+.cloud,
+.star {
+    transition: transform 100ms ease-in; 
+}
+
+.cloud:hover,
+.star:hover {
+    transform: scale(1.1);
+}
